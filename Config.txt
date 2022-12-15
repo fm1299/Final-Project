@@ -1,9 +1,0 @@
-
-*****INFORMACION DEL PROYECTO*****
-
--Nombre: Tk App
--Version: 1.0.dev0
--Tipo de Archivo: .py
--Compilador: Python
--Version: 3.10.7
--Dependencias: Tkinter
