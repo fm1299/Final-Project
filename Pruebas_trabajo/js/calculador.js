@@ -57,6 +57,14 @@ function multiplicacion(a,b,c){
     c.value = c_1
     return
 }
+function factorial(a,c){
+    var c_1=1
+    for(var i = a; i>0;i--){
+        c_1 *= i
+    }
+    c.value = c_1
+    return 
+}
 function operacion(){
     var a = document.getElementById("a")
     var b = document.getElementById("b")
