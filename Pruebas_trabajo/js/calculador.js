@@ -1,15 +1,14 @@
-var a_0=false
-var b_0=false
+let a_0=false
+let b_0=false
 function borrar(){
-    var a = document.getElementById("a")
-    var b = document.getElementById("b")
-    var c =document.getElementById("resultado")
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c =document.getElementById("resultado")
     a.value = ""
     b.value = ""
     c.value = ""
 }
 function seleccionar(e){
-    console.log(e)
     if(e =='a'){
         a_0=true
         b_0=false
@@ -21,50 +20,46 @@ function seleccionar(e){
 }
 function editar(v){
     if(a_0){
-        var a = document.getElementById("a")
-        var m = a.value
+        let a = document.getElementById("a")
+        let m = a.value
         m = m + v
         a.value = m 
     }
     else if (b_0){
-        var b = document.getElementById("b")
-        var m = b.value
+        let b = document.getElementById("b")
+        let m = b.value
         m = m + v
         b.value = m 
     }
 }
 function agregar(s){
-    var m = document.getElementById("simbolo")
+    let m = document.getElementById("simbolo")
     m.value = s
 }
 function suma(a,b,c){
-    var c_1 = a + b
+    let c_1 = a + b
     c.value = c_1
-    return
 }
 function resta(a,b,c){
-    var c_1 = a - b
+    let c_1 = a - b
     c.value = c_1
-    return
 }
 function division(a,b,c){
-    var c_1 = a / b
+    let c_1 = a / b
     c.value = c_1
-    return
 }
 function multiplicacion(a,b,c){
-    var c_1 = a * b
+    let c_1 = a * b
     c.value = c_1
-    return
 }
 function operacion(){
-    var a = document.getElementById("a")
-    var b = document.getElementById("b")
-    var c =document.getElementById("resultado")
-    var a_1 = parseFloat(a.value)
-    var b_1 = parseFloat(b.value)
-    var s = document.getElementById("simbolo")
-    var simbolo = s.value
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c =document.getElementById("resultado")
+    let a_1 = parseFloat(a.value)
+    let b_1 = parseFloat(b.value)
+    let s = document.getElementById("simbolo")
+    let simbolo = s.value
     if(simbolo == "+"){
         suma(a_1,b_1,c)
     }
