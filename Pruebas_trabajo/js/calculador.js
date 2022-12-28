@@ -50,7 +50,7 @@ function division(a,b,c){
 }
 function multiplicacion(a,b,c){
     let c_1 = a * b
-    c.value = c_1
+    return c_1
 }
 function operacion(){
     let a = document.getElementById("a")
@@ -77,7 +77,34 @@ function operacion(){
             division(a_1,b_1,c)
         }
     }
+    else if (simbolo == "^"){
+        if(b_1 == 0.0 && a_1 == 0.0)
+            window.alert("El exponente y la base no pueden ser 0 ambos");
+        else if(b_1 < 0.0)
+            window.alert("El exponente no puede ser negativo");
+        else if(b_1 % 1 == 0)
+            potencia(a_1,b_1,c)
+        else
+            window.alert("El exponente no puede ser decimal");
+    }
     else{
         window.alert("Simbolo incorrecto o sin simbolo")
     }
 }
+//FUNCION DE POTENCIA AGREGADA
+function potencia(a,b,c){
+    if(b == 0.0)
+        c.value = 1.0
+    if(a == 0.0)
+        c.value = 0.0
+    let c_1 = a;
+    while (b > 1){
+        c_1 = c_1 * a
+        b = b - 1;
+    }
+    //El verdadero resultado está aquí abajo
+    c.value = c_1
+    //Este return solo es para probar
+    //return c_1
+}
+module.exports = {potencia}
