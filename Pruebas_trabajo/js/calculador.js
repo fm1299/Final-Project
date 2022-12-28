@@ -62,7 +62,7 @@ function factorial(a,c){
     for(var i = a; i>0;i--){
         c_1 *= i
     }
-    c.value = c_1
+    c.value = c_1gi
     return 
 }
 function operacion(){
