@@ -70,6 +70,11 @@ function factorial(a, c) {
         return
     }
 }
+function raiz(a,c){
+    let c_1
+    c_1=Math.sqrt(a)
+    c.value=c_1
+}
 function percentage(a, b, c) {
     let c_1 = (a / 100 * b)
     c.value = c_1
@@ -115,7 +120,9 @@ function operacion() {
     else if (simbolo == "!") {
         factorial(a_1, c)
     }
-
+    else if (simbolo=="√"){
+        raiz(a_1,c)
+    }
     else if (simbolo == "%") {
         percentage(a_1, b_1, c)
     }
