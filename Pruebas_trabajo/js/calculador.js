@@ -105,7 +105,7 @@ function operacion(){
         else
             window.alert("El exponente no puede ser decimal");
     }
-    else if(simbolo = "!"){
+    else if(simbolo == "!"){
         factorial(a_1,c)
     }
     else{
