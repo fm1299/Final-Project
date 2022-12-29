@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/josue/2022-12-29-ZAP-Report-.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title _msthash="149916" _msttexthash="387374">Informe de escaneo ZAP</title>
+<link href="./Informe de escaneo ZAP_files/normalize.css" rel="stylesheet">
+<link href="./Informe de escaneo ZAP_files/main.css" rel="stylesheet">
+<link href="./Informe de escaneo ZAP_files/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 _msthash="360763" _msttexthash="387374">Informe de escaneo ZAP</h1>
+		<p>
+			<font _mstmutation="1" _msthash="336778" _msttexthash="1094821"><span _mstmutation="1" _istranslated="1">Generado con</span> <a href="https://zaproxy.org/" _mstmutation="1" _istranslated="1"><img src="./Informe de escaneo ZAP_files/zap32x32.png" alt="El logotipo de ZAP" class="zap-logo" _mstalt="266968" _istranslated="1">ZAP</a> <span _mstmutation="1" _istranslated="1">el jue 29 dic 2022, a las 16:33:08</span></font>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2 _msthash="217594" _msttexthash="134784">Contenido</h2>
+			<nav>
+				<ol>
+					<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#about-this-report" _msthash="550979" _msttexthash="415350">Acerca de este informe</a>
+						<ol>
+							
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#report-parameters" _msthash="956605" _msttexthash="474448">Parámetros del informe</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#summaries" _msthash="1282619" _msttexthash="154661">Resúmenes</a>
+						<ol>
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#risk-confidence-counts" _msthash="1874535" _msttexthash="1174615">Conteos de alertas por riesgo y confianza</a></li>
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#site-risk-counts" _msthash="1874665" _msttexthash="912496">Conteo de alertas por sitio y riesgo</a></li>
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-counts" _msthash="1874795" _msttexthash="1056211">Recuentos de alertas por tipo de alerta</a></li>
+						</ol></li>
+					<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alerts" _msthash="1282749" _msttexthash="94939">Alertas</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alerts--risk-2-confidence-3" _msthash="1874796" _msttexthash="738244"><span _istranslated="1">Riesgo</span>=<span class="risk-level" _istranslated="1">Medio</span>, <span _istranslated="1">Confianza</span>=<span class="confidence-level" _istranslated="1">Alto</span> <span _istranslated="1">(1)</span></a></li>
+							
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alerts--risk-2-confidence-2" _msthash="1874925" _msttexthash="781625"><span _istranslated="1">Riesgo</span>=<span class="risk-level" _istranslated="1">Medio</span>, <span _istranslated="1">Confianza</span>=<span class="confidence-level" _istranslated="1">Medio</span> <span _istranslated="1">(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alerts--risk-1-confidence-3" _msthash="1875055" _msttexthash="691834"><span _istranslated="1">Riesgo</span>=<span class="risk-level" _istranslated="1">Bajo</span>, <span _istranslated="1">Confianza</span>=<span class="confidence-level" _istranslated="1">Alto</span> <span _istranslated="1">(1)</span></a></li>
+							
+							
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alerts--risk-0-confidence-1" _msthash="1875185" _msttexthash="1037608"><span _istranslated="1">Riesgo</span>=<span class="risk-level" _istranslated="1">Informativo</span>, <span _istranslated="1">Confianza</span>=<span class="confidence-level" _istranslated="1">Bajo</span> <span _istranslated="1">(2)</span></a></li>
+							  
+						</ol></li>
+					<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#appendix" _msthash="1282879" _msttexthash="124917">Apéndice</a>
+						<ol>
+							<li><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-types" _msthash="1875056" _msttexthash="231231">Tipos de alerta</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section id="about-this-report" class="about-this-report">
+			<h2 _msthash="494819" _msttexthash="415350">Acerca de este informe</h2>
+
+			
+
+			<section id="report-parameters">
+				<h3 _msthash="506311" _msttexthash="474448">Parámetros del informe</h3>
+				<div class="report-parameters--container">
+					<h4 _msthash="740948" _msttexthash="140985">Contextos</h4>
+					
+					
+					<p _msthash="704002" _msttexthash="5876910">No se seleccionaron contextos, por lo que todos los contextos se incluyeron de forma predeterminada.</p>
+					  
+
+					<h4 _msthash="741208" _msttexthash="79508">Sitios</h4>
+					
+					<p _msthash="704236" _msttexthash="1000792">Se incluyeron los siguientes sitios:</p>
+					<ul class="sites-list">
+						<li><span class="site" _msthash="971243" _msttexthash="1385501">https://calculadoraunsa.000webhostapp.com</span></li>
+					</ul>
+					
+					<p _msthash="704470" _msttexthash="4877236">(Si no se seleccionó ningún sitio, todos los sitios se incluyeron de forma predeterminada).</p>
+					<p _msthash="704587" _msttexthash="8195304">Un sitio incluido también debe estar dentro de uno de los contextos incluidos para que sus datos se incluyan en el informe.</p>
+
+					<h4 _msthash="741858" _msttexthash="289523">Niveles de riesgo</h4>
+					<p>
+						<font _mstmutation="1" _msthash="704821" _msttexthash="1063621"><span _mstmutation="1" _istranslated="1">Incluye</span>: <span class="included-risk-codes" _mstmutation="1" _istranslated="1"><span class="risk-level" _istranslated="1">Alto</span>, <span class="risk-level" _istranslated="1">Medio</span>, <span class="risk-level" _istranslated="1">Bajo</span>, <span class="risk-level" _istranslated="1">Informativo</span></span></font>
+					</p>
+					<p>
+						<font _mstmutation="1" _msthash="741286" _msttexthash="308711"><span _mstmutation="1" _istranslated="1">Excluido</span>: <span _mstmutation="1" _istranslated="1">Ninguno</span></font>
+						
+					</p>
+
+					<h4 _msthash="779116" _msttexthash="381524">Niveles de confianza</h4>
+					<p>
+						<font _mstmutation="1" _msthash="741546" _msttexthash="1434134"><span _mstmutation="1" _istranslated="1">Incluido</span>: <span class="included-confidence-codes" _mstmutation="1" _istranslated="1"><span class="confidence-level" _istranslated="1">Usuario confirmado</span>, <span class="confidence-level" _istranslated="1">Alto</span>, <span class="confidence-level" _istranslated="1">Medio</span>, <span class="confidence-level" _istranslated="1">Bajo</span></span></font>
+					</p>
+					<p>
+						<font _mstmutation="1" _msthash="741676" _msttexthash="2481999"><span _mstmutation="1" _istranslated="1">Excluido</span>: <span class="included-confidence-codes" _mstmutation="1" _istranslated="1"> <span class="confidence-level" _istranslated="1">Usuario confirmado</span>, <span class="confidence-level" _istranslated="1">Alto</span>, <span class="confidence-level" _istranslated="1">Medio</span>, <span class="confidence-level" _istranslated="1">Bajo</span>, <span class="confidence-level" _istranslated="1">Falso positivo</span></span></font>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2 _msthash="243477" _msttexthash="154661">Resúmenes</h2>
+
+			<section id="risk-confidence-counts">
+				<h3 _msthash="697541" _msttexthash="1174615">Conteos de alertas por riesgo y confianza</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p _msthash="1591993" _msttexthash="5611437">Esta tabla muestra el número de alertas para cada nivel de riesgo y confianza incluido en el informe.</p>
+						<p _msthash="1592110" _msttexthash="12902994">(Los porcentajes entre paréntesis representan el recuento como porcentaje del número total de alertas incluidas en el informe, redondeado a un decimal.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="5" _msthash="1834833" _msttexthash="133627">Confianza</th>
+						</tr>
+						<tr>
+							<th scope="col" _msthash="1834898" _msttexthash="351858">Usuario confirmado</th>
+							<th scope="col" _msthash="1835028" _msttexthash="138034">Contralto</th>
+							<th scope="col" _msthash="1835158" _msttexthash="58734">Medio</th>
+							<th scope="col" _msthash="1835288" _msttexthash="42926">Bajo</th>
+							<th scope="col" _msthash="1835418" _msttexthash="60814">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="5" _msthash="1842581" _msttexthash="77194">Riesgo</th>
+							<th scope="row" _msthash="1842711" _msttexthash="138034">Contralto</th>
+							<td _msthash="1842425" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842555" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842685" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842815" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842945" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row" _msthash="1842776" _msttexthash="58734">Medio</th>
+							<td _msthash="1842490" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842620" _msttexthash="48204"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(20,0 %)</span></td>
+							<td _msthash="1842750" _msttexthash="48204"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(20,0 %)</span></td>
+							<td _msthash="1842880" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843010" _msttexthash="48529"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(40,0 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row" _msthash="1842971" _msttexthash="42926">Bajo</th>
+							<td _msthash="1842686" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1842816" _msttexthash="48204"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(20,0 %)</span></td>
+							<td _msthash="1842946" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843075" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843205" _msttexthash="48204"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(20,0 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row" _msthash="1843166" _msttexthash="184808">Informativo</th>
+							<td _msthash="1842881" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843011" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843140" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843270" _msttexthash="48529"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(40,0 %)</span></td>
+							<td _msthash="1843400" _msttexthash="48529"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(40,0 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row" _msthash="1843361" _msttexthash="60814">Total</th>
+							<td _msthash="1843076" _msttexthash="39429"><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0,0 %)</span> <span _istranslated="1"></span></td>
+							<td _msthash="1843206" _msttexthash="48529"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(40,0 %)</span></td>
+							<td _msthash="1843335" _msttexthash="48204"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(20,0 %)</span></td>
+							<td _msthash="1843465" _msttexthash="48529"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(40,0 %)</span></td>
+							<td _msthash="1843595" _msttexthash="40521"><span _istranslated="1"></span><br _istranslated="1"> 5 <span class="additional-info-percentages" _istranslated="1">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="site-risk-counts">
+				<h3 _msthash="457444" _msttexthash="912496">Conteo de alertas por sitio y riesgo</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p _msthash="1219075" _msttexthash="10544872">Esta tabla muestra, para cada sitio para el que se generaron una o más alertas, el número de descripciones generadas en cada nivel de riesgo.</p>
+						<p _msthash="1219192" _msttexthash="4805385">Las alertas con un nivel de confianza de "Falso positivo" se han excluido de estos recuentos.</p>
+						<p _msthash="1219309" _msttexthash="7503171">(Los números entre paréntesis son el número de alertas generadas para el sitio en o por encima de ese nivel de riesgo).</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4" _msthash="1430663" _msttexthash="77194">Riesgo</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<font _mstmutation="1" _msthash="1430728" _msttexthash="145795">Alto <span class="additional-info-percentages" _mstmutation="1" _istranslated="1">(= Alto)</span> <span _mstmutation="1" _istranslated="1"></span><br _mstmutation="1" _istranslated="1"></font>  
+							</th>
+							<th scope="col">
+								<font _mstmutation="1" _msthash="1430858" _msttexthash="207324">Medio <span class="additional-info-percentages" _mstmutation="1" _istranslated="1">(&gt;= Medio)</span> <span _mstmutation="1" _istranslated="1"></span><br _mstmutation="1" _istranslated="1"></font> 
+							</th>
+							<th scope="col">
+								<font _mstmutation="1" _msthash="1430988" _msttexthash="161551"><span _mstmutation="1" _istranslated="1">Bajo</span><br _mstmutation="1" _istranslated="1"> <span class="additional-info-percentages" _mstmutation="1" _istranslated="1">(&gt;= bajo)</span></font> 
+							</th>
+							<th scope="col">
+								<font _mstmutation="1" _msthash="1431118" _msttexthash="639418"><span _mstmutation="1" _istranslated="1">Informativo</span><br _mstmutation="1" _istranslated="1"> <span class="additional-info-percentages" _mstmutation="1" _istranslated="1">(&gt;= Informativo)</span></font> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="1" _msthash="1438411" _msttexthash="61568">Sitio</th>
+							<th scope="row" _msthash="1438541" _msttexthash="1385501">https://calculadoraunsa.000webhostapp.com</th>
+							
+							<td _msthash="1438255" _msttexthash="19474"><span _istranslated="1"></span><br _istranslated="1"> 0 <span class="additional-info-percentages" _istranslated="1">(0)</span></td>
+							<td _msthash="1438385" _msttexthash="19890"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(2)</span></td>
+							<td _msthash="1438515" _msttexthash="19916"><span _istranslated="1"></span><br _istranslated="1"> 1 <span class="additional-info-percentages" _istranslated="1">(3)</span></td>
+							<td _msthash="1438645" _msttexthash="20241"><span _istranslated="1"></span><br _istranslated="1"> 2 <span class="additional-info-percentages" _istranslated="1">(5)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="alert-type-counts">
+				<h3 _msthash="496665" _msttexthash="1056211">Recuentos de alertas por tipo de alerta</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p _msthash="1282164" _msttexthash="6464874">Esta tabla muestra el número de alertas de cada tipo de alerta, junto con el nivel de riesgo del tipo de alerta.</p>
+						<p _msthash="1282281" _msttexthash="14295463">(Los porcentajes entre paréntesis representan cada recuento como un porcentaje, redondeado a un decimal, del número total de alertas incluidas en este informe.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col" _msthash="1498640" _msttexthash="138996">Alert type</th>
+							<th scope="col" _msthash="1498770" _msttexthash="45747">Risk</th>
+							<th scope="col" _msthash="1498900" _msttexthash="62218">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-0" _msthash="1506518" _msttexthash="1213745">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level" _msthash="1506232" _msttexthash="58734">Medio</td>
+							<td _msthash="1506362" _msttexthash="49179"><span>4</span><br> <span class="additional-info-percentages">(80,0&nbsp;%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-1" _msthash="1506713" _msttexthash="840190">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level" _msthash="1506427" _msttexthash="58734">Medio</td>
+							<td _msthash="1506557" _msttexthash="48529"><span>2</span><br> <span class="additional-info-percentages">(40,0&nbsp;%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-2" _msthash="1506908" _msttexthash="1221103">Strict-Transport-Security Header Not Set</a></th>
+							<td class="risk-level" _msthash="1506622" _msttexthash="42926">Bajo</td>
+							<td _msthash="1506752" _msttexthash="57876"><span>6</span><br> <span class="additional-info-percentages">(120,0&nbsp;%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-3" _msthash="1507103" _msttexthash="2018406">Divulgación de información - Comentarios sospechosos</a></th>
+							<td class="risk-level" _msthash="1506817" _msttexthash="184808">Informativo</td>
+							<td _msthash="1506947" _msttexthash="49179"><span>4</span><br> <span class="additional-info-percentages">(80,0&nbsp;%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-4" _msthash="1507298" _msttexthash="1008631">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level" _msthash="1507012" _msttexthash="184808">Informativo</td>
+							<td _msthash="1507142" _msttexthash="48529"><span>2</span><br> <span class="additional-info-percentages">(40,0&nbsp;%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row" _msthash="1509248" _msttexthash="60814">Total</th>
+							<td></td>
+							<td _msthash="1509092" _msttexthash="4823">5</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2 _msthash="163423" _msttexthash="78312">Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<font _mstmutation="1" _msthash="825279" _msttexthash="689910"><span _mstmutation="1">Risk</span>=<span class="risk-level" _mstmutation="1">Medio</span>, <span _mstmutation="1">Confidence</span>=<span class="confidence-level" _mstmutation="1">Alto</span> <span _mstmutation="1">(1)</span></font>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<font _mstmutation="1" _msthash="1316614" _msttexthash="1468324"><span class="site" _mstmutation="1">https://calculadoraunsa.000webhostapp.com</span> <span _mstmutation="1">(1)</span></font>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<font _mstmutation="1" _msthash="1913379" _msttexthash="1291498"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-0" _mstmutation="1">Content Security Policy (CSP) Header Not Set</a> <span _mstmutation="1">(1)</span></font>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url" _msthash="3923088" _msttexthash="2374437">GET https://calculadoraunsa.000webhostapp.com/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row" _msthash="5567211" _msttexthash="136032">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/" _msthash="6738342" _msttexthash="159861">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html" _msthash="6738472" _msttexthash="161174">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5567406" _msttexthash="324116">Alert description</th>
+		<td> 
+<p _msthash="6020703" _msttexthash="208313170">Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row" _msthash="5567601" _msttexthash="98384">Request</th>
+		<td><details open="open">
+				<summary _msthash="8065174" _msttexthash="1144637">Request line and header section (247 bytes)</summary>
+				
+				<pre><code>GET https://calculadoraunsa.000webhostapp.com/robots.txt HTTP/1.1
+Host: calculadoraunsa.000webhostapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary _msthash="8065499" _msttexthash="377715">Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5567796" _msttexthash="116831">Response</th>
+		<td><details open="open">
+				<summary _msthash="8065629" _msttexthash="1084694">Status line and header section (300 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 29 Dec 2022 21:30:39 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Accept-Ranges: bytes
+Server: awex
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-ID: c8359d70801c654999049fa2ffd7da99
+Content-Length: 18841
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary _msthash="8065954" _msttexthash="503776">Response body (18841 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-us"&gt;
+&lt;head&gt;
+    &lt;script&gt;
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-10701068-1', 'auto');
+        ga('send', 'pageview');
+        ga('send', 'event', 'error-page', 'open', 'error-40x');
+    &lt;/script&gt;
+
+    &lt;meta charset=utf-8&gt;
+    &lt;meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0" name=viewport&gt;
+    &lt;meta name="HandheldFriendly" content="True"&gt;
+    &lt;title&gt;Page Not Found | 000webhost&lt;/title&gt;
+    &lt;link rel="shortcut icon" type="image/x-icon" href="https://cdn.000webhost.com/000webhost/logo/favicon.ico"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="preconnect stylesheet"&gt;
+    &lt;style&gt;html, body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85vw;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: white;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        justify-content: flex-start;
+    }
+
+    p {
+        -webkit-margin-after: 0px;
+        -webkit-margin-before: 0px;
+        font-size: 15px;
+        color: #7F828B;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        padding: 0 5%;
+        width: 90%;
+        height: 100vh;
+    }
+
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .flex-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .align-items-center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .justify-content-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .bg-black {
+        background-color: #212121;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    .logo-holder {
+        position: absolute;
+        width: 17%;
+        margin-top: 3.25vh;
+        margin-bottom: 6vh;
+    }
+
+    .top-section {
+        margin-bottom: 50px;
+    }
+
+    .heading-1 {
+        font-size: 3rem;
+        line-height: 1.25;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+
+    .mr-30 {
+        margin-right: 30px;
+    }
+
+    .image-holder {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* ----- Corgi Background Styling Start ----- */
+
+    .error-code-bg {
+        position: absolute;
+        bottom: 30px;
+        font-size: 32vw;
+        color: transparent;
+        line-height: .8em;
+        z-index: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #b2b9bc;
+        -ms-text-stroke-width: 1px;
+        -ms-text-stroke-color: #b2b9bc;
+    }
+
+    .corgi {
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        width: 15vw;
+    }
+
+    .corgi__spotlight {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        width: 50vw;
+    }
+
+    .corgi--default {
+        width: 100%;
+    }
+
+    .corgi--hover {
+        display: none;
+    }
+
+    .corgi:hover .corgi--default {
+        display: none;
+    }
+
+    .corgi:hover .corgi--hover {
+        display: block;
+        width: 100%;
+    }
+    /* ----- Corgi Background Styling End ----- */
+
+    /* ----- Button Styling Start ----- */
+
+    .button {
+        position: relative;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 0.33rem;
+        padding: 1rem 30px;
+        min-width: 64px;
+        min-height: 44px;
+        vertical-align: middle;
+        text-align: center;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+        font-size: 1.15rem;
+        font-weight: bold;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: -webkit-box-shadow 0.2s;
+        transition: -webkit-box-shadow 0.2s;
+        -o-transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    }
+    /* Overlay */
+    .button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+    }
+    .button:hover:before {
+        opacity: 0.08;
+    }
+    .button:focus:before {
+        opacity: 0.24;
+    }
+    .button:hover:focus:before {
+        opacity: 0.3;
+    }
+
+    .button:active:after {
+        opacity: 0.32;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        -webkit-transition: -webkit-transform 0s;
+        transition: -webkit-transform 0s;
+        -o-transition: transform 0s;
+        transition: transform 0s;
+        transition: transform 0s, -webkit-transform 0s;
+    }
+
+    /* ----- Primary Button Start ----- */
+
+    .button--primary {
+        border: none;
+        color: rgb(255, 255, 255);
+        background-color: #ff5c62;
+        -webkit-box-shadow: 0 2px 12px -6px #cc292f;
+        box-shadow: 0 2px 12px -6px #cc292f;
+    }
+    /* Hover, Focus */
+    .button--primary:hover, .button--primary:focus {
+        color: rgb(255, 255, 255);
+        -webkit-box-shadow: 0 2px 16px -6px #cc292f;
+        box-shadow: 0 2px 16px -6px #cc292f;
+    }
+    /* Active */
+    .button--primary:active {
+        -webkit-box-shadow: 0 6px 20px -6px #cc292f;
+        box-shadow: 0 6px 20px -6px #cc292f;
+    }
+    /* Ripple */
+    .button--primary:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        width: 20rem; /* Safari */
+        height: 20rem; /* Safari */
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+        transition: opacity 1s, -webkit-transform 0.5s;
+        -o-transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s, -webkit-transform 0.5s;
+    }
+
+    /* ----- Primary Button End ----- */
+
+    /* ----- Button Styling End ----- */
+
+    .main-ctas--mobile {
+        display: none;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+        html {
+            font-size: 1.3vh;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        html {
+            font-size: 12px;
+        }
+        .image-holder {
+            height: 50vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo-holder {
+            width: 50%;
+            max-width: 155px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi {
+            width: 25vw;
+        }
+        .corgi__spotlight {
+            width: 80%;
+        }
+        .error-code-bg {
+            font-size: 50vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .bottom-section--heading-mobile {
+            margin: auto;
+            width: 90%;
+        }
+        .heading-1 {
+            
+            font-size: 3.25rem;
+        }
+        .logo-holder {
+            width: 40%;
+            margin-top: 3vh;
+            margin-bottom: 5vh;
+        }
+        .main-ctas {
+            display: none;
+        }
+        .main-ctas__button {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+        .main-ctas__button--spaced {
+            margin: 0 5%;
+        }
+        .main-ctas--mobile {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+        }
+        .button {
+            padding: 0.5em 20px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi__spotlight {
+            width: 100%;
+        }
+        .error-code-bg {
+            font-size: 55vw;
+        }
+        .corgi {
+            width: 35vw;
+        }
+        .top-section {
+            -ms-flex-positive: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .container:hover .corgi--default {
+            display: none;
+        }
+        .container:hover .corgi--hover {
+            display: block;
+        }
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body class="bg-black"&gt;
+        &lt;div class="container flex flex-column full-width align-items-center"&gt;
+            &lt;div class="top-section flex flex-column full-width align-items-center"&gt;
+                &lt;div class="logo-holder"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/logo/000webhost-logo-white.svg" class="full-width" alt="000webhost logo"&gt;
+                &lt;/div&gt;
+                &lt;div class="image-holder flex justify-content-center"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-spotlight.svg" class="corgi__spotlight" alt="Dog spotlight"&gt;
+                    &lt;div class="corgi"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground.svg" class="corgi--default" alt="Dog lies on the ground"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground-looking-back.svg" class="corgi--hover" alt="Dog lies on the ground and looks back"&gt;
+                    &lt;/div&gt;
+                    &lt;span class="error-code-bg text-bold"&gt;404&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-column"&gt;
+                &lt;div class="bottom-section--heading-mobile"&gt;
+                    &lt;h1 class="heading-1 text-bold text-center text-white mb-30"&gt;Page Not Found - error 404&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class="flex justify-content-evenly main-ctas"&gt;
+                    &lt;a class="button button--primary mr-30 main-ctas__button" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="main-ctas--mobile full-width justify-content-center"&gt;
+                    &lt;a class="button button--primary main-ctas__button main-ctas__button--spaced" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Optin monster --&gt;
+        &lt;div id="om-xenpppbq3wh9gy8qsrbf-holder"&gt;&lt;/div&gt;&lt;script&gt;var xenpppbq3wh9gy8qsrbf,xenpppbq3wh9gy8qsrbf_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){xenpppbq3wh9gy8qsrbf_poll(function(){if(window['om_loaded']){if(!xenpppbq3wh9gy8qsrbf){xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();return xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");&lt;/script&gt;
+
+    &lt;div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"&gt;&lt;a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"&gt;&lt;img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"&gt;&lt;/a&gt;&lt;/div&gt;&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&amp;&amp;(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&amp;&amp;0&lt;notification.length&amp;&amp;null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&amp;utm_medium=panel&amp;utm_campaign=000-wp"),link.innerHTML='&lt;button class="upgrade_button_red_sale"&gt;Claim Deal&lt;/button&gt;',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL &amp; DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$&lt;span style='font-size: 80px;'&gt;2.49&lt;/span&gt;/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='&lt;div class="content-wrapper"&gt;'+mainContent.innerHTML+'&lt;/div&gt;&lt;div class="web-hosting-90-off-image-wrapper"&gt;&lt;img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"&gt;&lt;/div&gt;';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row" _msthash="5567991" _msttexthash="118690">Solution</th>
+		<td> 
+<p _msthash="6021444" _msttexthash="58331819">Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: "Content-Security-Policy" for Chrome 25+, Firefox 23+ and Safari 7+, "X-Content-Security-Policy" for Firefox 4.0+ and Internet Explorer 10+, and "X-WebKit-CSP" for Chrome 14+ and Safari 6+.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<font _mstmutation="1" _msthash="824785" _msttexthash="732069"><span _mstmutation="1">Risk</span>=<span class="risk-level" _mstmutation="1">Medio</span>, <span _mstmutation="1">Confidence</span>=<span class="confidence-level" _mstmutation="1">Medio</span> <span _mstmutation="1">(1)</span></font>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<font _mstmutation="1" _msthash="1315990" _msttexthash="1468324"><span class="site" _mstmutation="1">https://calculadoraunsa.000webhostapp.com</span> <span _mstmutation="1">(1)</span></font>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<font _mstmutation="1" _msthash="1912625" _msttexthash="904423"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-1" _mstmutation="1">Missing Anti-clickjacking Header</a> <span _mstmutation="1">(1)</span></font>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url" _msthash="3922009" _msttexthash="1562665">GET https://calculadoraunsa.000webhostapp.com</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row" _msthash="5565924" _msttexthash="136032">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/" _msthash="6736925" _msttexthash="159861">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking" _msthash="6737055" _msttexthash="197951">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html" _msthash="6737185" _msttexthash="161174">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5566119" _msttexthash="324116">Alert description</th>
+		<td> 
+<p _msthash="6019364" _msttexthash="13724204">The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row" _msthash="5566314" _msttexthash="98384">Request</th>
+		<td><details open="open">
+				<summary _msthash="8063627" _msttexthash="1143688">Request line and header section (236 bytes)</summary>
+				
+				<pre><code>GET https://calculadoraunsa.000webhostapp.com HTTP/1.1
+Host: calculadoraunsa.000webhostapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary _msthash="8063952" _msttexthash="377715">Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5566509" _msttexthash="116831">Response</th>
+		<td><details open="open">
+				<summary _msthash="8064082" _msttexthash="1089283">Status line and header section (292 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 29 Dec 2022 21:30:39 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Accept-Ranges: bytes
+Server: awex
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-ID: 9a1702c92728c9d0ae2b3df1ad961d97
+Content-Length: 7694
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary _msthash="8064407" _msttexthash="482092">Response body (7694 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Calculadora&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="calculador.css"&gt;
+    &lt;script src="calculador.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="calculadora"&gt;
+        &lt;br&gt;
+        &lt;input type="text" id="resultado" readonly&gt;
+        &lt;br&gt;
+        &lt;input type="number" class="numero1" onclick="seleccionar('a')" id="a"&gt;
+        &lt;input type="text" id="simbolo" readonly&gt;
+        &lt;input type="number" class="numero1" onclick="seleccionar('b')" id="b"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="+" onclick="agregar('+')" class="boton1"&gt;
+        &lt;input type="button" value="-" onclick="agregar('-')" class="boton1"&gt;
+
+
+        &lt;input type="button" value="7" onclick="editar('7')" class="boton1"&gt;
+        &lt;input type="button" value="8" onclick="editar('8')" class="boton1"&gt;
+        &lt;input type="button" value="9" onclick="editar('9')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="x" onclick="agregar('x')" class="boton1"&gt;
+        &lt;input type="button" value="C" onclick="borrar()" class="boton1"&gt;
+        &lt;input type="button" value="4" onclick="editar('4')" class="boton1"&gt;
+        &lt;input type="button" value="5" onclick="editar('5')" class="boton1"&gt;
+        &lt;input type="button" value="6" onclick="editar('6')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="÷" onclick="agregar('÷')" class="boton1"&gt;
+        &lt;input type="button" value="log" onclick="agregar('log')" class="boton1"&gt;
+        &lt;input type="button" value="1" onclick="editar('1')" class="boton1"&gt;
+        &lt;input type="button" value="2" onclick="editar('2')" class="boton1"&gt;
+        &lt;input type="button" value="3" onclick="editar('3')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="=" onclick="operacion()" class="boton1"&gt;
+        &lt;input type="button" value="^" onclick="agregar('^')" class="boton1"&gt;
+        &lt;input type="button" value="!" onclick="agregar('!')" class="boton1"&gt;
+        &lt;input type="button" value="0" onclick="editar('0')" class="boton1"&gt;
+        &lt;input type="button" value="%" onclick="agregar('%')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="√" onclick="agregar('√')" class="boton1"&gt;
+        
+        
+    &lt;/div&gt;
+&lt;div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"&gt;&lt;a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"&gt;&lt;img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"&gt;&lt;/a&gt;&lt;/div&gt;&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&amp;&amp;(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&amp;&amp;0&lt;notification.length&amp;&amp;null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&amp;utm_medium=panel&amp;utm_campaign=000-wp"),link.innerHTML='&lt;button class="upgrade_button_red_sale"&gt;Claim Deal&lt;/button&gt;',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL &amp; DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$&lt;span style='font-size: 80px;'&gt;2.49&lt;/span&gt;/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='&lt;div class="content-wrapper"&gt;'+mainContent.innerHTML+'&lt;/div&gt;&lt;div class="web-hosting-90-off-image-wrapper"&gt;&lt;img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"&gt;&lt;/div&gt;';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}&lt;/script&gt;&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5566704" _msttexthash="134875">Parameter</th>
+		<td><pre><code>X-Frame-Options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row" _msthash="5566899" _msttexthash="118690">Solution</th>
+		<td> 
+<p _msthash="6020352" _msttexthash="13545285">Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p _msthash="6020469" _msttexthash="42829007">If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<font _mstmutation="1" _msthash="824954" _msttexthash="645359"><span _mstmutation="1">Risk</span>=<span class="risk-level" _mstmutation="1">Bajo</span>, <span _mstmutation="1">Confidence</span>=<span class="confidence-level" _mstmutation="1">Alto</span> <span _mstmutation="1">(1)</span></font>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<font _mstmutation="1" _msthash="1316159" _msttexthash="1468324"><span class="site" _mstmutation="1">https://calculadoraunsa.000webhostapp.com</span> <span _mstmutation="1">(1)</span></font>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<font _mstmutation="1" _msthash="1912794" _msttexthash="1297166"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-2" _mstmutation="1">Strict-Transport-Security Header Not Set</a> <span _mstmutation="1">(1)</span></font>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url" _msthash="3922178" _msttexthash="2374437">GET https://calculadoraunsa.000webhostapp.com/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row" _msthash="5566093" _msttexthash="136032">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/" _msthash="6737094" _msttexthash="159861">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html" _msthash="6737224" _msttexthash="161174">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5566288" _msttexthash="324116">Alert description</th>
+		<td> 
+<p _msthash="6019533" _msttexthash="47570796">HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row" _msthash="5566483" _msttexthash="98384">Request</th>
+		<td><details open="open">
+				<summary _msthash="8063796" _msttexthash="1144637">Request line and header section (247 bytes)</summary>
+				
+				<pre><code>GET https://calculadoraunsa.000webhostapp.com/robots.txt HTTP/1.1
+Host: calculadoraunsa.000webhostapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary _msthash="8064121" _msttexthash="377715">Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5566678" _msttexthash="116831">Response</th>
+		<td><details open="open">
+				<summary _msthash="8064251" _msttexthash="1084694">Status line and header section (300 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 29 Dec 2022 21:30:39 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Accept-Ranges: bytes
+Server: awex
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-ID: c8359d70801c654999049fa2ffd7da99
+Content-Length: 18841
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary _msthash="8064576" _msttexthash="503776">Response body (18841 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-us"&gt;
+&lt;head&gt;
+    &lt;script&gt;
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-10701068-1', 'auto');
+        ga('send', 'pageview');
+        ga('send', 'event', 'error-page', 'open', 'error-40x');
+    &lt;/script&gt;
+
+    &lt;meta charset=utf-8&gt;
+    &lt;meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0" name=viewport&gt;
+    &lt;meta name="HandheldFriendly" content="True"&gt;
+    &lt;title&gt;Page Not Found | 000webhost&lt;/title&gt;
+    &lt;link rel="shortcut icon" type="image/x-icon" href="https://cdn.000webhost.com/000webhost/logo/favicon.ico"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="preconnect stylesheet"&gt;
+    &lt;style&gt;html, body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85vw;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: white;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        justify-content: flex-start;
+    }
+
+    p {
+        -webkit-margin-after: 0px;
+        -webkit-margin-before: 0px;
+        font-size: 15px;
+        color: #7F828B;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        padding: 0 5%;
+        width: 90%;
+        height: 100vh;
+    }
+
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .flex-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .align-items-center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .justify-content-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .bg-black {
+        background-color: #212121;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    .logo-holder {
+        position: absolute;
+        width: 17%;
+        margin-top: 3.25vh;
+        margin-bottom: 6vh;
+    }
+
+    .top-section {
+        margin-bottom: 50px;
+    }
+
+    .heading-1 {
+        font-size: 3rem;
+        line-height: 1.25;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+
+    .mr-30 {
+        margin-right: 30px;
+    }
+
+    .image-holder {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* ----- Corgi Background Styling Start ----- */
+
+    .error-code-bg {
+        position: absolute;
+        bottom: 30px;
+        font-size: 32vw;
+        color: transparent;
+        line-height: .8em;
+        z-index: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #b2b9bc;
+        -ms-text-stroke-width: 1px;
+        -ms-text-stroke-color: #b2b9bc;
+    }
+
+    .corgi {
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        width: 15vw;
+    }
+
+    .corgi__spotlight {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        width: 50vw;
+    }
+
+    .corgi--default {
+        width: 100%;
+    }
+
+    .corgi--hover {
+        display: none;
+    }
+
+    .corgi:hover .corgi--default {
+        display: none;
+    }
+
+    .corgi:hover .corgi--hover {
+        display: block;
+        width: 100%;
+    }
+    /* ----- Corgi Background Styling End ----- */
+
+    /* ----- Button Styling Start ----- */
+
+    .button {
+        position: relative;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 0.33rem;
+        padding: 1rem 30px;
+        min-width: 64px;
+        min-height: 44px;
+        vertical-align: middle;
+        text-align: center;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+        font-size: 1.15rem;
+        font-weight: bold;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: -webkit-box-shadow 0.2s;
+        transition: -webkit-box-shadow 0.2s;
+        -o-transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    }
+    /* Overlay */
+    .button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+    }
+    .button:hover:before {
+        opacity: 0.08;
+    }
+    .button:focus:before {
+        opacity: 0.24;
+    }
+    .button:hover:focus:before {
+        opacity: 0.3;
+    }
+
+    .button:active:after {
+        opacity: 0.32;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        -webkit-transition: -webkit-transform 0s;
+        transition: -webkit-transform 0s;
+        -o-transition: transform 0s;
+        transition: transform 0s;
+        transition: transform 0s, -webkit-transform 0s;
+    }
+
+    /* ----- Primary Button Start ----- */
+
+    .button--primary {
+        border: none;
+        color: rgb(255, 255, 255);
+        background-color: #ff5c62;
+        -webkit-box-shadow: 0 2px 12px -6px #cc292f;
+        box-shadow: 0 2px 12px -6px #cc292f;
+    }
+    /* Hover, Focus */
+    .button--primary:hover, .button--primary:focus {
+        color: rgb(255, 255, 255);
+        -webkit-box-shadow: 0 2px 16px -6px #cc292f;
+        box-shadow: 0 2px 16px -6px #cc292f;
+    }
+    /* Active */
+    .button--primary:active {
+        -webkit-box-shadow: 0 6px 20px -6px #cc292f;
+        box-shadow: 0 6px 20px -6px #cc292f;
+    }
+    /* Ripple */
+    .button--primary:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        width: 20rem; /* Safari */
+        height: 20rem; /* Safari */
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+        transition: opacity 1s, -webkit-transform 0.5s;
+        -o-transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s, -webkit-transform 0.5s;
+    }
+
+    /* ----- Primary Button End ----- */
+
+    /* ----- Button Styling End ----- */
+
+    .main-ctas--mobile {
+        display: none;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+        html {
+            font-size: 1.3vh;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        html {
+            font-size: 12px;
+        }
+        .image-holder {
+            height: 50vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo-holder {
+            width: 50%;
+            max-width: 155px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi {
+            width: 25vw;
+        }
+        .corgi__spotlight {
+            width: 80%;
+        }
+        .error-code-bg {
+            font-size: 50vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .bottom-section--heading-mobile {
+            margin: auto;
+            width: 90%;
+        }
+        .heading-1 {
+            
+            font-size: 3.25rem;
+        }
+        .logo-holder {
+            width: 40%;
+            margin-top: 3vh;
+            margin-bottom: 5vh;
+        }
+        .main-ctas {
+            display: none;
+        }
+        .main-ctas__button {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+        .main-ctas__button--spaced {
+            margin: 0 5%;
+        }
+        .main-ctas--mobile {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+        }
+        .button {
+            padding: 0.5em 20px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi__spotlight {
+            width: 100%;
+        }
+        .error-code-bg {
+            font-size: 55vw;
+        }
+        .corgi {
+            width: 35vw;
+        }
+        .top-section {
+            -ms-flex-positive: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .container:hover .corgi--default {
+            display: none;
+        }
+        .container:hover .corgi--hover {
+            display: block;
+        }
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body class="bg-black"&gt;
+        &lt;div class="container flex flex-column full-width align-items-center"&gt;
+            &lt;div class="top-section flex flex-column full-width align-items-center"&gt;
+                &lt;div class="logo-holder"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/logo/000webhost-logo-white.svg" class="full-width" alt="000webhost logo"&gt;
+                &lt;/div&gt;
+                &lt;div class="image-holder flex justify-content-center"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-spotlight.svg" class="corgi__spotlight" alt="Dog spotlight"&gt;
+                    &lt;div class="corgi"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground.svg" class="corgi--default" alt="Dog lies on the ground"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground-looking-back.svg" class="corgi--hover" alt="Dog lies on the ground and looks back"&gt;
+                    &lt;/div&gt;
+                    &lt;span class="error-code-bg text-bold"&gt;404&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-column"&gt;
+                &lt;div class="bottom-section--heading-mobile"&gt;
+                    &lt;h1 class="heading-1 text-bold text-center text-white mb-30"&gt;Page Not Found - error 404&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class="flex justify-content-evenly main-ctas"&gt;
+                    &lt;a class="button button--primary mr-30 main-ctas__button" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="main-ctas--mobile full-width justify-content-center"&gt;
+                    &lt;a class="button button--primary main-ctas__button main-ctas__button--spaced" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Optin monster --&gt;
+        &lt;div id="om-xenpppbq3wh9gy8qsrbf-holder"&gt;&lt;/div&gt;&lt;script&gt;var xenpppbq3wh9gy8qsrbf,xenpppbq3wh9gy8qsrbf_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){xenpppbq3wh9gy8qsrbf_poll(function(){if(window['om_loaded']){if(!xenpppbq3wh9gy8qsrbf){xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();return xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");&lt;/script&gt;
+
+    &lt;div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"&gt;&lt;a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"&gt;&lt;img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"&gt;&lt;/a&gt;&lt;/div&gt;&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&amp;&amp;(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&amp;&amp;0&lt;notification.length&amp;&amp;null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&amp;utm_medium=panel&amp;utm_campaign=000-wp"),link.innerHTML='&lt;button class="upgrade_button_red_sale"&gt;Claim Deal&lt;/button&gt;',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL &amp; DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$&lt;span style='font-size: 80px;'&gt;2.49&lt;/span&gt;/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='&lt;div class="content-wrapper"&gt;'+mainContent.innerHTML+'&lt;/div&gt;&lt;div class="web-hosting-90-off-image-wrapper"&gt;&lt;img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"&gt;&lt;/div&gt;';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row" _msthash="5566873" _msttexthash="118690">Solution</th>
+		<td> 
+<p _msthash="6020274" _msttexthash="8357050">Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				
+				
+				  
+				 
+				
+				
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<font _mstmutation="1" _msthash="823641" _msttexthash="978679"><span _mstmutation="1">Risk</span>=<span class="risk-level" _mstmutation="1">Informativo</span>, <span _mstmutation="1">Confidence</span>=<span class="confidence-level" _mstmutation="1">Bajo</span> <span _mstmutation="1">(2)</span></font>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<font _mstmutation="1" _msthash="1314456" _msttexthash="1468961"><span class="site" _mstmutation="1">https://calculadoraunsa.000webhostapp.com</span> <span _mstmutation="1">(2)</span></font>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<font _mstmutation="1" _msthash="1910701" _msttexthash="2111369"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-3" _mstmutation="1">Divulgación de información - Comentarios sospechosos</a> <span _mstmutation="1">(1)</span></font>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url" _msthash="3919110" _msttexthash="2374437">GET https://calculadoraunsa.000webhostapp.com/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row" _msthash="5562401" _msttexthash="136032">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/" _msthash="6733012" _msttexthash="158821">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html" _msthash="6733142" _msttexthash="160394">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5562596" _msttexthash="324116">Alert description</th>
+		<td> 
+<p _msthash="6015685" _msttexthash="17085276">The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5562791" _msttexthash="136032">Other info</th>
+		<td> 
+<p _msthash="6015932" _msttexthash="41190474">The following pattern was used: \bADMIN\b and was detected in the element starting with: "&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o", see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5562986" _msttexthash="98384">Request</th>
+		<td><details open="open">
+				<summary _msthash="8059779" _msttexthash="1144637">Request line and header section (247 bytes)</summary>
+				
+				<pre><code>GET https://calculadoraunsa.000webhostapp.com/robots.txt HTTP/1.1
+Host: calculadoraunsa.000webhostapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary _msthash="8060104" _msttexthash="377715">Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5563181" _msttexthash="116831">Response</th>
+		<td><details open="open">
+				<summary _msthash="8060234" _msttexthash="1084694">Status line and header section (300 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 29 Dec 2022 21:30:39 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Accept-Ranges: bytes
+Server: awex
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-ID: c8359d70801c654999049fa2ffd7da99
+Content-Length: 18841
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary _msthash="8060559" _msttexthash="503776">Response body (18841 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-us"&gt;
+&lt;head&gt;
+    &lt;script&gt;
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-10701068-1', 'auto');
+        ga('send', 'pageview');
+        ga('send', 'event', 'error-page', 'open', 'error-40x');
+    &lt;/script&gt;
+
+    &lt;meta charset=utf-8&gt;
+    &lt;meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0" name=viewport&gt;
+    &lt;meta name="HandheldFriendly" content="True"&gt;
+    &lt;title&gt;Page Not Found | 000webhost&lt;/title&gt;
+    &lt;link rel="shortcut icon" type="image/x-icon" href="https://cdn.000webhost.com/000webhost/logo/favicon.ico"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="preconnect stylesheet"&gt;
+    &lt;style&gt;html, body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85vw;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: white;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        justify-content: flex-start;
+    }
+
+    p {
+        -webkit-margin-after: 0px;
+        -webkit-margin-before: 0px;
+        font-size: 15px;
+        color: #7F828B;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        padding: 0 5%;
+        width: 90%;
+        height: 100vh;
+    }
+
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .flex-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    .align-items-center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+
+    .justify-content-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .bg-black {
+        background-color: #212121;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    .logo-holder {
+        position: absolute;
+        width: 17%;
+        margin-top: 3.25vh;
+        margin-bottom: 6vh;
+    }
+
+    .top-section {
+        margin-bottom: 50px;
+    }
+
+    .heading-1 {
+        font-size: 3rem;
+        line-height: 1.25;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+
+    .mr-30 {
+        margin-right: 30px;
+    }
+
+    .image-holder {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* ----- Corgi Background Styling Start ----- */
+
+    .error-code-bg {
+        position: absolute;
+        bottom: 30px;
+        font-size: 32vw;
+        color: transparent;
+        line-height: .8em;
+        z-index: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #b2b9bc;
+        -ms-text-stroke-width: 1px;
+        -ms-text-stroke-color: #b2b9bc;
+    }
+
+    .corgi {
+        position: absolute;
+        z-index: 2;
+        bottom: 10px;
+        width: 15vw;
+    }
+
+    .corgi__spotlight {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        width: 50vw;
+    }
+
+    .corgi--default {
+        width: 100%;
+    }
+
+    .corgi--hover {
+        display: none;
+    }
+
+    .corgi:hover .corgi--default {
+        display: none;
+    }
+
+    .corgi:hover .corgi--hover {
+        display: block;
+        width: 100%;
+    }
+    /* ----- Corgi Background Styling End ----- */
+
+    /* ----- Button Styling Start ----- */
+
+    .button {
+        position: relative;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 0.33rem;
+        padding: 1rem 30px;
+        min-width: 64px;
+        min-height: 44px;
+        vertical-align: middle;
+        text-align: center;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+        font-size: 1.15rem;
+        font-weight: bold;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: -webkit-box-shadow 0.2s;
+        transition: -webkit-box-shadow 0.2s;
+        -o-transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    }
+    /* Overlay */
+    .button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+    }
+    .button:hover:before {
+        opacity: 0.08;
+    }
+    .button:focus:before {
+        opacity: 0.24;
+    }
+    .button:hover:focus:before {
+        opacity: 0.3;
+    }
+
+    .button:active:after {
+        opacity: 0.32;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        -webkit-transition: -webkit-transform 0s;
+        transition: -webkit-transform 0s;
+        -o-transition: transform 0s;
+        transition: transform 0s;
+        transition: transform 0s, -webkit-transform 0s;
+    }
+
+    /* ----- Primary Button Start ----- */
+
+    .button--primary {
+        border: none;
+        color: rgb(255, 255, 255);
+        background-color: #ff5c62;
+        -webkit-box-shadow: 0 2px 12px -6px #cc292f;
+        box-shadow: 0 2px 12px -6px #cc292f;
+    }
+    /* Hover, Focus */
+    .button--primary:hover, .button--primary:focus {
+        color: rgb(255, 255, 255);
+        -webkit-box-shadow: 0 2px 16px -6px #cc292f;
+        box-shadow: 0 2px 16px -6px #cc292f;
+    }
+    /* Active */
+    .button--primary:active {
+        -webkit-box-shadow: 0 6px 20px -6px #cc292f;
+        box-shadow: 0 6px 20px -6px #cc292f;
+    }
+    /* Ripple */
+    .button--primary:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        width: 20rem; /* Safari */
+        height: 20rem; /* Safari */
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+        transition: opacity 1s, -webkit-transform 0.5s;
+        -o-transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s;
+        transition: opacity 1s, transform 0.5s, -webkit-transform 0.5s;
+    }
+
+    /* ----- Primary Button End ----- */
+
+    /* ----- Button Styling End ----- */
+
+    .main-ctas--mobile {
+        display: none;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+        html {
+            font-size: 1.3vh;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        html {
+            font-size: 12px;
+        }
+        .image-holder {
+            height: 50vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo-holder {
+            width: 50%;
+            max-width: 155px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi {
+            width: 25vw;
+        }
+        .corgi__spotlight {
+            width: 80%;
+        }
+        .error-code-bg {
+            font-size: 50vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .bottom-section--heading-mobile {
+            margin: auto;
+            width: 90%;
+        }
+        .heading-1 {
+            
+            font-size: 3.25rem;
+        }
+        .logo-holder {
+            width: 40%;
+            margin-top: 3vh;
+            margin-bottom: 5vh;
+        }
+        .main-ctas {
+            display: none;
+        }
+        .main-ctas__button {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+        .main-ctas__button--spaced {
+            margin: 0 5%;
+        }
+        .main-ctas--mobile {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+        }
+        .button {
+            padding: 0.5em 20px;
+        }
+        .image-holder {
+            height: 60vh;
+        }
+        .corgi__spotlight {
+            width: 100%;
+        }
+        .error-code-bg {
+            font-size: 55vw;
+        }
+        .corgi {
+            width: 35vw;
+        }
+        .top-section {
+            -ms-flex-positive: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .container:hover .corgi--default {
+            display: none;
+        }
+        .container:hover .corgi--hover {
+            display: block;
+        }
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body class="bg-black"&gt;
+        &lt;div class="container flex flex-column full-width align-items-center"&gt;
+            &lt;div class="top-section flex flex-column full-width align-items-center"&gt;
+                &lt;div class="logo-holder"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/logo/000webhost-logo-white.svg" class="full-width" alt="000webhost logo"&gt;
+                &lt;/div&gt;
+                &lt;div class="image-holder flex justify-content-center"&gt;
+                    &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-spotlight.svg" class="corgi__spotlight" alt="Dog spotlight"&gt;
+                    &lt;div class="corgi"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground.svg" class="corgi--default" alt="Dog lies on the ground"&gt;
+                        &lt;img src="https://cdn.000webhost.com/000webhost/000webhost-pages/corgi-lies-on-ground-looking-back.svg" class="corgi--hover" alt="Dog lies on the ground and looks back"&gt;
+                    &lt;/div&gt;
+                    &lt;span class="error-code-bg text-bold"&gt;404&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-column"&gt;
+                &lt;div class="bottom-section--heading-mobile"&gt;
+                    &lt;h1 class="heading-1 text-bold text-center text-white mb-30"&gt;Page Not Found - error 404&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class="flex justify-content-evenly main-ctas"&gt;
+                    &lt;a class="button button--primary mr-30 main-ctas__button" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="main-ctas--mobile full-width justify-content-center"&gt;
+                    &lt;a class="button button--primary main-ctas__button main-ctas__button--spaced" href="https://www.000webhost.com/?utm_source=000&amp;utm_medium=40x&amp;utm_campaign=pages"&gt;Go to homepage&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Optin monster --&gt;
+        &lt;div id="om-xenpppbq3wh9gy8qsrbf-holder"&gt;&lt;/div&gt;&lt;script&gt;var xenpppbq3wh9gy8qsrbf,xenpppbq3wh9gy8qsrbf_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){xenpppbq3wh9gy8qsrbf_poll(function(){if(window['om_loaded']){if(!xenpppbq3wh9gy8qsrbf){xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();return xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;xenpppbq3wh9gy8qsrbf=new OptinMonsterApp();xenpppbq3wh9gy8qsrbf.init({"u":"13439.673828","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");&lt;/script&gt;
+
+    &lt;div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"&gt;&lt;a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"&gt;&lt;img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"&gt;&lt;/a&gt;&lt;/div&gt;&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&amp;&amp;(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&amp;&amp;0&lt;notification.length&amp;&amp;null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&amp;utm_medium=panel&amp;utm_campaign=000-wp"),link.innerHTML='&lt;button class="upgrade_button_red_sale"&gt;Claim Deal&lt;/button&gt;',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL &amp; DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$&lt;span style='font-size: 80px;'&gt;2.49&lt;/span&gt;/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='&lt;div class="content-wrapper"&gt;'+mainContent.innerHTML+'&lt;/div&gt;&lt;div class="web-hosting-90-off-image-wrapper"&gt;&lt;img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"&gt;&lt;/div&gt;';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row" _msthash="5563376" _msttexthash="110552">Evidence</th>
+		<td><pre><code>admin</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5563571" _msttexthash="118690">Solution</th>
+		<td> 
+<p _msthash="6016920" _msttexthash="12651652">Eliminar todos los comentarios que devuelvan información que podría ayudar a un atacante y arreglar cualquier problema subyacente al que se refieran.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<font _mstmutation="1" _msthash="1910896" _msttexthash="1077934"><a href="file:///C:/Users/josue/2022-12-29-ZAP-Report-.html#alert-type-4" _mstmutation="1">Re-examine Cache-control Directives</a> <span _mstmutation="1">(1)</span></font>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url" _msthash="3919630" _msttexthash="1593826">GET https://calculadoraunsa.000webhostapp.com/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row" _msthash="5563129" _msttexthash="136032">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses" _msthash="6733870" _msttexthash="195559">WSTG-v42-ATHN-06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5563324" _msttexthash="324116">Alert description</th>
+		<td> 
+<p _msthash="6016465" _msttexthash="39918047">The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row" _msthash="5563519" _msttexthash="98384">Request</th>
+		<td><details open="open">
+				<summary _msthash="8060312" _msttexthash="1144169">Request line and header section (237 bytes)</summary>
+				
+				<pre><code>GET https://calculadoraunsa.000webhostapp.com/ HTTP/1.1
+Host: calculadoraunsa.000webhostapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary _msthash="8060637" _msttexthash="377715">Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5563714" _msttexthash="116831">Response</th>
+		<td><details open="open">
+				<summary _msthash="8060767" _msttexthash="1089283">Status line and header section (292 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 29 Dec 2022 21:30:38 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Accept-Ranges: bytes
+Server: awex
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-ID: 812d15d01855a9f3e72e60829449dd8f
+Content-Length: 7694
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary _msthash="8061092" _msttexthash="482092">Response body (7694 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Calculadora&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="calculador.css"&gt;
+    &lt;script src="calculador.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="calculadora"&gt;
+        &lt;br&gt;
+        &lt;input type="text" id="resultado" readonly&gt;
+        &lt;br&gt;
+        &lt;input type="number" class="numero1" onclick="seleccionar('a')" id="a"&gt;
+        &lt;input type="text" id="simbolo" readonly&gt;
+        &lt;input type="number" class="numero1" onclick="seleccionar('b')" id="b"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="+" onclick="agregar('+')" class="boton1"&gt;
+        &lt;input type="button" value="-" onclick="agregar('-')" class="boton1"&gt;
+
+
+        &lt;input type="button" value="7" onclick="editar('7')" class="boton1"&gt;
+        &lt;input type="button" value="8" onclick="editar('8')" class="boton1"&gt;
+        &lt;input type="button" value="9" onclick="editar('9')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="x" onclick="agregar('x')" class="boton1"&gt;
+        &lt;input type="button" value="C" onclick="borrar()" class="boton1"&gt;
+        &lt;input type="button" value="4" onclick="editar('4')" class="boton1"&gt;
+        &lt;input type="button" value="5" onclick="editar('5')" class="boton1"&gt;
+        &lt;input type="button" value="6" onclick="editar('6')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="÷" onclick="agregar('÷')" class="boton1"&gt;
+        &lt;input type="button" value="log" onclick="agregar('log')" class="boton1"&gt;
+        &lt;input type="button" value="1" onclick="editar('1')" class="boton1"&gt;
+        &lt;input type="button" value="2" onclick="editar('2')" class="boton1"&gt;
+        &lt;input type="button" value="3" onclick="editar('3')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="=" onclick="operacion()" class="boton1"&gt;
+        &lt;input type="button" value="^" onclick="agregar('^')" class="boton1"&gt;
+        &lt;input type="button" value="!" onclick="agregar('!')" class="boton1"&gt;
+        &lt;input type="button" value="0" onclick="editar('0')" class="boton1"&gt;
+        &lt;input type="button" value="%" onclick="agregar('%')" class="boton1"&gt;
+        &lt;br&gt;
+        &lt;input type="button" value="√" onclick="agregar('√')" class="boton1"&gt;
+        
+        
+    &lt;/div&gt;
+&lt;div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"&gt;&lt;a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"&gt;&lt;img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"&gt;&lt;/a&gt;&lt;/div&gt;&lt;script&gt;function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o&lt;n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&amp;&amp;(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&amp;&amp;0&lt;notification.length&amp;&amp;null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&amp;utm_medium=panel&amp;utm_campaign=000-wp"),link.innerHTML='&lt;button class="upgrade_button_red_sale"&gt;Claim Deal&lt;/button&gt;',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL &amp; DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$&lt;span style='font-size: 80px;'&gt;2.49&lt;/span&gt;/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='&lt;div class="content-wrapper"&gt;'+mainContent.innerHTML+'&lt;/div&gt;&lt;div class="web-hosting-90-off-image-wrapper"&gt;&lt;img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"&gt;&lt;/div&gt;';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}&lt;/script&gt;&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row" _msthash="5563909" _msttexthash="134875">Parameter</th>
+		<td><pre><code>Cache-Control</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row" _msthash="5564104" _msttexthash="118690">Solution</th>
+		<td> 
+<p _msthash="6017453" _msttexthash="20515807">For secure content, ensure the cache-control HTTP header is set with "no-cache, no-store, must-revalidate". If an asset should be cached consider setting the directives "public, max-age, immutable".</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2 _msthash="213213" _msttexthash="114712">Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3 _msthash="294671" _msttexthash="162916">Alert types</h3>
+				<p class="alert-types-intro" _msthash="272857" _msttexthash="4040517">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li id="alert-type-0">
+						<h4 _msthash="289107" _msttexthash="1213745">Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row" _msthash="1128803" _msttexthash="77519">Source</th>
+								<td>
+									
+									   <font _mstmutation="1" _msthash="1128517" _msttexthash="3000283"><span _mstmutation="1">raised by a passive scanner</span> <span _mstmutation="1">(<a href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span></font>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1128998" _msttexthash="42432">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/693.html" _msthash="1128712" _msttexthash="16809">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1129193" _msttexthash="54145">WASC ID</th>
+								<td _msthash="1128907" _msttexthash="9971">15</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1129388" _msttexthash="131391">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy" _msthash="1689623" _msttexthash="6317051">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html" _msthash="1689753" _msttexthash="5692895">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a href="http://www.w3.org/TR/CSP/" _msthash="1689883" _msttexthash="491114">http://www.w3.org/TR/CSP/</a></li>
+										<li><a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html" _msthash="1690013" _msttexthash="5607641">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/" _msthash="1690143" _msttexthash="3987048">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a href="http://caniuse.com/#feat=contentsecuritypolicy" _msthash="1690273" _msttexthash="1813760">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a href="http://content-security-policy.com/" _msthash="1690403" _msttexthash="1062204">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-1">
+						<h4 _msthash="289406" _msttexthash="840190">Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row" _msthash="1129375" _msttexthash="77519">Source</th>
+								<td>
+									
+									   <font _mstmutation="1" _msthash="1129089" _msttexthash="1866566"><span _mstmutation="1">raised by a passive scanner</span> <span _mstmutation="1">(<a href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span></font>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1129570" _msttexthash="42432">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1021.html" _msthash="1129284" _msttexthash="21671">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1129765" _msttexthash="54145">WASC ID</th>
+								<td _msthash="1129479" _msttexthash="9971">15</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1129960" _msttexthash="131391">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options" _msthash="1690325" _msttexthash="3716011">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-2">
+						<h4 _msthash="289705" _msttexthash="1221103">Strict-Transport-Security Header Not Set</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row" _msthash="1129947" _msttexthash="77519">Source</th>
+								<td>
+									
+									   <font _mstmutation="1" _msthash="1129661" _msttexthash="2505152"><span _mstmutation="1">raised by a passive scanner</span> <span _mstmutation="1">(<a href="https://www.zaproxy.org/docs/alerts/10035/">Strict-Transport-Security Header</a>)
+									</span></font>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1130142" _msttexthash="42432">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/319.html" _msthash="1129856" _msttexthash="16406">319</a></td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1130337" _msttexthash="54145">WASC ID</th>
+								<td _msthash="1130051" _msttexthash="9971">15</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1130532" _msttexthash="131391">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html" _msthash="1691027" _msttexthash="6567301">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a></li>
+										<li><a href="https://owasp.org/www-community/Security_Headers" _msthash="1691157" _msttexthash="1923077">https://owasp.org/www-community/Security_Headers</a></li>
+										<li><a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security" _msthash="1691287" _msttexthash="2778503">http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a></li>
+										<li><a href="http://caniuse.com/stricttransportsecurity" _msthash="1691417" _msttexthash="1592955">http://caniuse.com/stricttransportsecurity</a></li>
+										<li><a href="http://tools.ietf.org/html/rfc6797" _msthash="1691547" _msttexthash="909220">http://tools.ietf.org/html/rfc6797</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-3">
+						<h4 _msthash="290004" _msttexthash="2018406">Divulgación de información - Comentarios sospechosos</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row" _msthash="1130519" _msttexthash="77519">Source</th>
+								<td>
+									
+									   <font _mstmutation="1" _msthash="1130233" _msttexthash="4270565"><span _mstmutation="1">raised by a passive scanner</span> <span _mstmutation="1">(<a href="https://www.zaproxy.org/docs/alerts/10027/">Divulgación de información - Comentarios sospechosos</a>)
+									</span></font>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1130714" _msttexthash="42432">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/200.html" _msthash="1130428" _msttexthash="15158">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1130909" _msttexthash="54145">WASC ID</th>
+								<td _msthash="1130623" _msttexthash="9763">13</td>
+							</tr>
+							
+						</tbody></table>
+					</li>
+					<li id="alert-type-4">
+						<h4 _msthash="290303" _msttexthash="1008631">Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row" _msthash="1131091" _msttexthash="77519">Source</th>
+								<td>
+									
+									   <font _mstmutation="1" _msthash="1130805" _msttexthash="2662400"><span _mstmutation="1">raised by a passive scanner</span> <span _mstmutation="1">(<a href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span></font>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1131286" _msttexthash="42432">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/525.html" _msthash="1131000" _msttexthash="16224">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1131481" _msttexthash="54145">WASC ID</th>
+								<td _msthash="1131195" _msttexthash="9763">13</td>
+							</tr>
+							<tr>
+								<th scope="row" _msthash="1131676" _msttexthash="131391">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching" _msthash="1692431" _msttexthash="7533227">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" _msthash="1692561" _msttexthash="3539640">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></li>
+										<li><a href="https://grayduck.mn/2021/09/13/cache-control-recommendations/" _msthash="1692691" _msttexthash="2684110">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+
+
+
+
+
+</body></html>
