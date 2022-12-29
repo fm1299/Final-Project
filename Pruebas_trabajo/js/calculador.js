@@ -118,7 +118,10 @@ function operacion() {
         c.value = factorial(a_1)
     }
     else if (simbolo=="√"){
-        c.value = raiz(a_1)
+        if(a_1 < 0.0)
+            window.alert("No existe raiz para negativos");
+        else
+            c.value = raiz(a_1)
     }
     else if (simbolo == "%") {
         c.value = percentage(a_1, b_1)
