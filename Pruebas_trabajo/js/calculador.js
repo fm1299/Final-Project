@@ -52,14 +52,23 @@ function multiplicacion(a,b,c){
     let c_1 = a * b
     c.value = c_1
 }
-
 function factorial(a,c){
     let c_1=1
-    for(let i = a; i>0;i--){
+    if(a==0){
+        c.value = 1
+        return
+    }
+    for(let i = Math.abs(a); i>0;i--){
         c_1 *= i
     }
-    c.value = c_1
-    //return c_1
+    if(a<0){
+        c.value = c_1*-1
+        return
+    }
+    else{
+        c.value = c_1
+        return
+    }
 }
 function percentage(a,b,c){
     let c_1 = (a/100 *b)
@@ -99,13 +108,11 @@ function operacion(){
         else
             window.alert("El exponente no puede ser decimal");
     }
-<<<<<<< HEAD
     else if(simbolo == "!"){
         factorial(a_1,c)
-=======
+
     else if (simbolo == "%"){
         percentage(a_1,b_1,c)
->>>>>>> b6e11bce4fe56412d1b408288796d6891913f87d
     }
     
     else{
@@ -128,3 +135,4 @@ function potencia(a,b,c){
     //Este return solo es para probar
     //return c_1
 }
+module.exports = {potencia}
