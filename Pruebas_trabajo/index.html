@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculadora</title>
-        <link rel="stylesheet" type="text/css" href="css/calculador.css">
-        <script src="js/calculador.js"></script>
-    </head>
-    <body>
-        <div id="calculadora">
-            <br>
-            <input type="text" id="resultado" readonly>
-            <br>
-            <input type="number" class="numero1" onclick="seleccionar('a')" id="a">
-            <input type="text" id="simbolo" readonly>
-            <input type="number" class="numero1" onclick="seleccionar('b')" id="b">
-            <br>
-            <input type="button" value="+" onclick="agregar('+')" class="boton1">
-            <input type="button" value="-" onclick="agregar('-')" class="boton1">
-            
 
-            <input type="button" value="7" onclick="editar('7')" class="boton1">
-            <input type="button" value="8" onclick="editar('8')" class="boton1">
-            <input type="button" value="9" onclick="editar('9')" class="boton1">
-            <br>
-            <input type="button" value="x" onclick="agregar('x')" class="boton1">
-            <input type="button" value="C" onclick="borrar()" class="boton1">
-            <input type="button" value="4" onclick="editar('4')" class="boton1">
-            <input type="button" value="5" onclick="editar('5')" class="boton1">
-            <input type="button" value="6" onclick="editar('6')" class="boton1">
-            <br>
-            <input type="button" value="÷" onclick="agregar('÷')" class="boton1">
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="css/calculador.css">
+    <script src="js/calculador.js"></script>
+</head>
 
-            <input type="button" value="=" onclick="operacion()" class="boton1">
-            
-            <input type="button" value="1" onclick="editar('1')" class="boton1">
-            <input type="button" value="2" onclick="editar('2')" class="boton1">
-            <input type="button" value="3" onclick="editar('3')" class="boton1">
-            <br>
-            <input type="button" value="^" onclick="agregar('^')" class="boton1">
-            <input type="button" value="!" onclick="agregar('!')" class="boton1">
-            <input type="button" value="%" onclick="agregar('%')" class="boton1">
+<body>
+    <div id="calculadora">
+        <br>
+        <input type="text" id="resultado" readonly>
+        <br>
+        <input type="number" class="numero1" onclick="seleccionar('a')" id="a">
+        <input type="text" id="simbolo" readonly>
+        <input type="number" class="numero1" onclick="seleccionar('b')" id="b">
+        <br>
+        <input type="button" value="+" onclick="agregar('+')" class="boton1">
+        <input type="button" value="-" onclick="agregar('-')" class="boton1">
 
-            <input type="button" value="0" onclick="editar('0')" class="boton1">
-        </div>
-    </body>
+
+        <input type="button" value="7" onclick="editar('7')" class="boton1">
+        <input type="button" value="8" onclick="editar('8')" class="boton1">
+        <input type="button" value="9" onclick="editar('9')" class="boton1">
+        <br>
+        <input type="button" value="x" onclick="agregar('x')" class="boton1">
+        <input type="button" value="C" onclick="borrar()" class="boton1">
+        <input type="button" value="4" onclick="editar('4')" class="boton1">
+        <input type="button" value="5" onclick="editar('5')" class="boton1">
+        <input type="button" value="6" onclick="editar('6')" class="boton1">
+        <br>
+        <input type="button" value="÷" onclick="agregar('÷')" class="boton1">
+
+        <input type="button" value="log" onclick="agregar('log')" class="boton1">
+
+        <input type="button" value="1" onclick="editar('1')" class="boton1">
+        <input type="button" value="2" onclick="editar('2')" class="boton1">
+        <input type="button" value="3" onclick="editar('3')" class="boton1">
+        <br>
+        <input type="button" value="=" onclick="operacion()" class="boton1">
+        <input type="button" value="^" onclick="agregar('^')" class="boton1">
+        <input type="button" value="!" onclick="agregar('!')" class="boton1">
+        <input type="button" value="%" onclick="agregar('%')" class="boton1">
+
+        <input type="button" value="0" onclick="editar('0')" class="boton1">
+    </div>
+</body>
+
 </html>
