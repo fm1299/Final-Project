@@ -50,26 +50,24 @@ function division(a,b,c){
 }
 function multiplicacion(a,b,c){
     let c_1 = a * b
-    return c_1
+    c.value = c_1
 }
+
 function factorial(a,c){
-    var c_1=1
-    if(a==0){
-        c.value = 1
-        return
-    }
-    for(var i = Math.abs(a); i>0;i--){
+    let c_1=1
+    for(let i = a; i>0;i--){
         c_1 *= i
     }
-    if(a<0){
-        c.value = c_1*-1
-        return
-    }
-    else{
-        c.value = c_1
-        return
-    }
+    c.value = c_1
+    //return c_1
 }
+function percentage(a,b,c){
+    let c_1 = (a/100 *b)
+    c.value = c_1
+    //return c_1
+}
+module.exports={percentage}
+
 function operacion(){
     let a = document.getElementById("a")
     let b = document.getElementById("b")
@@ -88,12 +86,8 @@ function operacion(){
         multiplicacion(a_1,b_1,c)
     }
     else if ( simbolo == "÷"){
-        if(b_1 == 0.0){
-            window.alert("Division entre cero no permitida")
-        }
-        else{
-            division(a_1,b_1,c)
-        }
+        (b_1 == 0.0)?window.alert("Division entre cero no permitida"):division(a_1,b_1,c)
+
     }
     else if (simbolo == "^"){
         if(b_1 == 0.0 && a_1 == 0.0)
@@ -105,9 +99,10 @@ function operacion(){
         else
             window.alert("El exponente no puede ser decimal");
     }
-    else if(simbolo = "!"){
-        factorial(a_1,c)
+    else if (simbolo == "%"){
+        percentage(a_1,b_1,c)
     }
+    
     else{
         window.alert("Simbolo incorrecto o sin simbolo")
     }
@@ -128,4 +123,3 @@ function potencia(a,b,c){
     //Este return solo es para probar
     //return c_1
 }
-module.exports = {potencia}
