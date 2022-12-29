@@ -54,11 +54,21 @@ function multiplicacion(a,b,c){
 }
 function factorial(a,c){
     var c_1=1
-    for(var i = a; i>0;i--){
+    if(a==0){
+        c.value = 1
+        return
+    }
+    for(var i = Math.abs(a); i>0;i--){
         c_1 *= i
     }
-    c.value = c_1gi
-    return 
+    if(a<0){
+        c.value = c_1*-1
+        return
+    }
+    else{
+        c.value = c_1
+        return
+    }
 }
 function operacion(){
     let a = document.getElementById("a")
