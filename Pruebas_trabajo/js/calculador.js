@@ -99,8 +99,13 @@ function operacion(){
         else
             window.alert("El exponente no puede ser decimal");
     }
+<<<<<<< HEAD
+    else if(simbolo == "!"){
+        factorial(a_1,c)
+=======
     else if (simbolo == "%"){
         percentage(a_1,b_1,c)
+>>>>>>> b6e11bce4fe56412d1b408288796d6891913f87d
     }
     
     else{
