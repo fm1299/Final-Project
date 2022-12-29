@@ -36,56 +36,51 @@ function agregar(s) {
     let m = document.getElementById("simbolo")
     m.value = s
 }
-function suma(a, b, c) {
+function suma(a, b) {
     let c_1 = a + b
-    c.value = c_1
+    return c_1
 }
-function resta(a, b, c) {
+function resta(a, b) {
     let c_1 = a - b
-    c.value = c_1
+    return c_1
 }
-function division(a, b, c) {
+function division(a, b) {
     let c_1 = a / b
-    c.value = c_1
+    return c_1
 }
-function multiplicacion(a, b, c) {
+function multiplicacion(a, b) {
     let c_1 = a * b
-    c.value = c_1
+    return c_1
 }
-function factorial(a, c) {
+function factorial(a) {
     let c_1 = 1
-    if (a == 0) {
-        c.value = 1
-        return
+    if (a == 0.0) {
+        return 1
     }
     for (let i = Math.abs(a); i > 0; i--) {
         c_1 *= i
     }
-    if (a < 0) {
-        c.value = c_1 * -1
-        return
+    if (a < 0.0) {
+        return c_1 * -1
     }
     else {
-        c.value = c_1
-        return
+        return c_1
     }
 }
-function raiz(a,c){
+function raiz(a){
     let c_1
-    c_1=Math.sqrt(a)
-    c.value=c_1
+    c_1 = Math.sqrt(a)
+    return c_1
 }
 function percentage(a, b, c) {
     let c_1 = (a / 100 * b)
-    c.value = c_1
-    //return c_1
+    return c_1
 }
-module.exports = { percentage }
 function log(a, b) {
     let r = Math.log(a) / Math.log(b);
-    return r.toFixed(4);
+    return parseFloat(r.toFixed(4));
 }
-module.exports = { log };
+
 function operacion() {
     let a = document.getElementById("a")
     let b = document.getElementById("b")
@@ -95,17 +90,19 @@ function operacion() {
     let s = document.getElementById("simbolo")
     let simbolo = s.value
     if (simbolo == "+") {
-        suma(a_1, b_1, c)
+        c.value = suma(a_1, b_1)
     }
     else if (simbolo == "-") {
-        resta(a_1, b_1, c)
+        c.value = resta(a_1, b_1)
     }
     else if (simbolo == "x") {
-        multiplicacion(a_1, b_1, c)
+        c.value = multiplicacion(a_1, b_1)
     }
     else if (simbolo == "÷") {
-        (b_1 == 0.0) ? window.alert("Division entre cero no permitida") : division(a_1, b_1, c)
-
+        if (b_1 == 0.0) 
+            window.alert("Division entre cero no permitida") 
+        else
+            c.value = division(a_1, b_1)
     }
     else if (simbolo == "^") {
         if (b_1 == 0.0 && a_1 == 0.0)
@@ -113,18 +110,21 @@ function operacion() {
         else if (b_1 < 0.0)
             window.alert("El exponente no puede ser negativo");
         else if (b_1 % 1 == 0)
-            potencia(a_1, b_1, c)
+            c.value = potencia(a_1, b_1)
         else
             window.alert("El exponente no puede ser decimal");
     }
     else if (simbolo == "!") {
-        factorial(a_1, c)
+        c.value = factorial(a_1)
     }
     else if (simbolo=="√"){
-        raiz(a_1,c)
+        if(a_1 < 0.0)
+            window.alert("No existe raiz para negativos");
+        else
+            c.value = raiz(a_1)
     }
     else if (simbolo == "%") {
-        percentage(a_1, b_1, c)
+        c.value = percentage(a_1, b_1)
     }
     else if (simbolo == "log") {
         if (a_1 < 0 || b_1 < 0) {
@@ -137,7 +137,7 @@ function operacion() {
             window.alert("Argumento no puede ser 0");
         }
         else {
-            c.value = log(a_1, b_1);;
+            c.value = log(a_1, b_1);
         }
     }
     else {
@@ -145,19 +145,16 @@ function operacion() {
     }
 }
 //FUNCION DE POTENCIA AGREGADA
-function potencia(a, b, c) {
+function potencia(a, b) {
     if (b == 0.0)
-        c.value = 1.0
+        return 1.0
     if (a == 0.0)
-        c.value = 0.0
+        return 0.0
     let c_1 = a;
     while (b > 1) {
         c_1 = c_1 * a
         b = b - 1;
     }
-    //El verdadero resultado está aquí abajo
-    c.value = c_1
-    //Este return solo es para probar
-    //return c_1
+    return c_1
 }
-module.exports = { potencia }
+module.exports = { potencia, log, percentage, raiz, factorial }
