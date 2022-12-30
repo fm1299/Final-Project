@@ -46,6 +46,160 @@ Calcular operaciones complejas como:
 ### Roy Angel Choquehuanca Anconeyra
 - Función Factorial
 - Pruebas de Rendimiento
+## FUNCIONAMIENTO DEL CODIGO
+El código requiere primero que se rellenen los espacios en blanco para los números, una vez puesto, se escoge la operación a realizar, luego se presiona el botón igual y se procede a realizar la operación y mostrarla en el recuadro superior. El código contiene las siguientes funciones básicas:
+```
+function suma(a,b,c){
+    let c_1 = a + b
+    c.value = c_1
+}
+function resta(a,b,c){
+    let c_1 = a - b
+    c.value = c_1
+}
+function division(a,b,c){
+    let c_1 = a / b
+    c.value = c_1
+}
+function multiplicacion(a,b,c){
+    let c_1 = a * b
+    c.value = c_1
+}
+```
+También tiene funciones que añaden otras capacidades como limpiar el campo, elegir el símbolo o poder usar los respectivos números de la calculadora para ponerlo en un cuadro:
+```
+function borrar() {
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c = document.getElementById("resultado")
+    a.value = ""
+    b.value = ""
+    c.value = ""
+}
+```
+```
+function seleccionar(e) {
+    if (e == 'a') {
+        a_0 = true
+        b_0 = false
+    }
+    else if (e == 'b') {
+        a_0 = false
+        b_0 = true
+    }
+}
+```
+```
+function editar(v) {
+    if (a_0) {
+        let a = document.getElementById("a")
+        let m = a.value
+        m = m + v
+        a.value = m
+    }
+    else if (b_0) {
+        let b = document.getElementById("b")
+        let m = b.value
+        m = m + v
+        b.value = m
+    }
+}
+```
+```
+function agregar(s) {
+    let m = document.getElementById("simbolo")
+    m.value = s
+}
+```
+Y la principal funcionalidad, la función operación, que determina lo que se va a realizar cuando se presiona el botón igual.
+```
+function operacion(){
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c =document.getElementById("resultado")
+    let a_1 = parseFloat(a.value)
+    let b_1 = parseFloat(b.value)
+    let s = document.getElementById("simbolo")
+    let simbolo = s.value
+    if(simbolo == "+"){
+        suma(a_1,b_1,c)
+    }
+    else if( simbolo == "-"){
+        resta(a_1,b_1,c)
+    }
+    else if (simbolo == "x"){
+        multiplicacion(a_1,b_1,c)
+    }
+    else if ( simbolo == "÷"){
+        if(b_1 == 0.0){
+            window.alert("Division entre cero no permitida")
+        }
+        else{
+            division(a_1,b_1,c)
+        }
+    }
+    else{
+        window.alert("Simbolo incorrecto o sin simbolo")
+    }
+}
+```
+## CODIGO IMPLEMENTADO
+Cada integrante ha implementado su respectiva funcionalidad, haciendo un fork al proyecto principal y dividiendo este en ramas, subiendo desde los fork hacia la respectiva rama de cada uno y de las ramas hacia la rama principal.
+### Función Factorial:
+```
+function factorial(a) {
+    let c_1 = 1
+    if (a == 0.0) {
+        return 1
+    }
+    for (let i = Math.abs(a); i > 0; i--) {
+        c_1 *= i
+    }
+    if (a < 0.0) {
+        return c_1 * -1
+    }
+    else {
+        return c_1
+    }
+}
+```
+### Función Logarítmica:
+```
+function log(a, b) {
+    let r = Math.log(a) / Math.log(b);
+    return parseFloat(r.toFixed(4));
+}
+```
+### Función Porcentaje:
+```
+function percentage(a, b, c) {
+    let c_1 = (a / 100 * b)
+    return c_1
+}
+```
+### Función Potencia:
+```
+function potencia(a, b) {
+    if (b == 0.0)
+        return 1.0
+    if (a == 0.0)
+        return 0.0
+    let c_1 = a;
+    while (b > 1) {
+        c_1 = c_1 * a
+        b = b - 1;
+    }
+    return c_1
+}
+```
+### Función Raíz:
+```
+function raiz(a){
+    let c_1
+    c_1 = Math.sqrt(a)
+    return c_1
+}
+```
 ## PRUEBAS UNITARIAS
 Para las pruebas unitarias hemos usado Jest, una librería de Javascript para realizar pruebas unitarias. Para poder usar las pruebas unitarias lo primero que hemos hecho es usar una variable llamada "calc" con el objetivo de pasarle el archivo js que será probado:
 ```
@@ -148,7 +302,228 @@ test('Raiz con numero negativo', () => {
 })
 ```
 ## PRUEBAS FUNCIONALES
-Para las pruebas unitarias hemos usado Selenium, teniendo una fácil compatibilidad con nuestro proyecto. Por cada implementación que hemos hecho, hemos implementado las siguientes pruebas funcionales:
+Para las pruebas unitarias hemos usado Selenium, teniendo una fácil compatibilidad con nuestro proyecto. Todos los códigos empiezan solicitando acceso a las librerías de selenium por medio de Node JS:
+```
+const {Builder,Key, By} = require('selenium-webdriver');
+const assert = require('assert');
+```
+Por cada implementación que hemos hecho, hemos implementado las siguientes pruebas funcionales:
+### Función Factorial: test_factorial.test.js
+```
+async function Factorial_cero() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("0.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[22]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("1",respuesta)
+    await driver.quit();
+}
+async function Factorial_positivo() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("5.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[22]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("120",respuesta)
+    await driver.quit();
+}
+async function Factorial_negativo() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-5.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[22]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("-120",respuesta)
+    await driver.quit();
+}
+Factorial_cero()
+Factorial_negativo()
+Factorial_positivo()
+```
+### Función Logarítmica: test_log.test.js
+```
+async function logaritmo_correcto() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("8", Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("2", Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[16]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("3", respuesta)
+    await driver.quit();
+}
+async function logaritmo_decimal() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("1.4", Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("2", Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[16]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("0.4854", respuesta)
+    await driver.quit();
+}
+async function logaritmo_negativo() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-8", Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("2", Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[16]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let alerta = await driver.switchTo().alert().getText()
+    assert.strictEqual(alerta, "Argumentos negativos")
+    await driver.quit();
+}
+logaritmo_correcto()
+logaritmo_decimal()
+logaritmo_negativo()
+```
+### Función Porcentaje: test_porcentaje.test.js
+```
+async function Porcentaje_con_numeros_enteros() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("50",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("4",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[24]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("2",respuesta)
+    await driver.quit();
+}
+async function Porcentaje_a_numero_negativo() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("40",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("-220",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[24]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("-88",respuesta)
+    await driver.quit();
+}
+async function Porcentaje_con_numeros_negativos() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-40",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("-220",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[24]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("88",respuesta)
+    await driver.quit();
+}
+async function Porcentaje_con_numeros_decimales() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-40.5",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("-220.2",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[24]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("89.181",respuesta)
+    await driver.quit();;
+}
+
+Porcentaje_con_numeros_enteros()
+Porcentaje_a_numero_negativo() 
+Porcentaje_con_numeros_negativos()
+Porcentaje_con_numeros_decimales()
+```
+### Función Potencia: test_potencia.test.js
+```
+async function Exponente_correcto() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-8.0",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("3.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[21]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("-512",respuesta)
+    await driver.quit();
+}
+async function Exponente_decimal() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-8.0",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("3.5",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[21]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let alerta = await driver.switchTo().alert().getText()
+    assert.strictEqual(alerta,"El exponente no puede ser decimal")
+    await driver.quit();
+}
+async function Exponente_negativo() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("8.0",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("-3.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[21]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let alerta = await driver.switchTo().alert().getText()
+    assert.strictEqual(alerta,"El exponente no puede ser negativo")
+    await driver.quit();
+}
+async function Exponente_y_base_igual_a_cero() {
+    let driver = await new Builder().forBrowser("chrome").build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("0.0")
+    await driver.findElement(By.id('b')).sendKeys("0.0")
+    await driver.findElement(By.xpath('/html/body/div/input[21]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let alerta = await driver.switchTo().alert().getText()
+    assert.strictEqual(alerta,"El exponente y la base no pueden ser 0 ambos")
+    await driver.quit();
+}
+Exponente_correcto()
+Exponente_decimal()
+Exponente_negativo()
+Exponente_y_base_igual_a_cero()
+```
+### Función Raíz: test_raiz.test.js
+```
+async function Raiz_cero() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("0.0",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[25]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("0",respuesta)
+    await driver.quit();
+}
+async function Raiz_positivo() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("16",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("2",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[25]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let respuesta = await driver.findElement(By.id('resultado')).getAttribute("value")
+    assert.strictEqual("4",respuesta)
+    await driver.quit();
+}
+async function Raiz_negativo() {
+    let driver = await new Builder().forBrowser('chrome').build()
+    await driver.get('file:///C:/Users/ubert/Documents/Uberto/UNSA/3er/2do_semestre/Ingenieria_de_Software_II/practica3_ISII_rama1-main/practica3_ISII_rama1-main/Pruebas_trabajo/index.html');
+    await driver.findElement(By.id('a')).sendKeys("-4",Key.RETURN)
+    await driver.findElement(By.id('b')).sendKeys("2",Key.RETURN)
+    await driver.findElement(By.xpath('/html/body/div/input[25]')).click()
+    await driver.findElement(By.xpath('/html/body/div/input[20]')).click()
+    let alerta = await driver.switchTo().alert().getText()
+    assert.strictEqual(alerta, "No existe raiz para negativos")
+    await driver.quit();
+}
+Raiz_cero()
+Raiz_negativo()
+Raiz_positivo()
+```
 ## ANALISIS ESTÁTICO
 ## PRUEBAS DE SEGURIDAD
 ## PRUEBAS DE RENDIMIENTO
