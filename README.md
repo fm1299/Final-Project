@@ -26,7 +26,7 @@ Calcular operaciones complejas como:
 - TRELLO: https://trello.com/b/DUHUnuYf/final-proyect-isii
 - ARQUITECTURA USADA: Patrón cliente-servidor
 ## DISTRIBUCIÓN DEL TRABAJO:
-https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/Trello.png
+![Trello usado](https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/Trello.png)
 ### UBERTO GARCIA CACERES
 - Base del proyecto
 - Función Potencia
