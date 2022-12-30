@@ -205,6 +205,14 @@ Para las pruebas unitarias hemos usado Jest, una librería de Javascript para re
 ```
 const calc = require('../../Pruebas_trabajo/js/calculador')
 ```
+También hemos hecho que cada función tenga un return para poder ser usados por Jest y un archivo Json por el cual podemos testear todos loss acrhivos de test:
+```
+{
+    "scripts": {
+      "test": "jest"
+    }
+}
+```
 Por cada implementación que hemos hecho, hemos implementado las siguientes pruebas unitarias:
 ### Función Factorial: test_factorial.test.js
 ```
@@ -525,8 +533,11 @@ Raiz_negativo()
 Raiz_positivo()
 ```
 ## ANALISIS ESTÁTICO
+
 ## PRUEBAS DE SEGURIDAD
+
 ## PRUEBAS DE RENDIMIENTO
+
 ## INSTALACION EN JENKINS
 ### Requisitos
 - Tener instalado NODE JS
