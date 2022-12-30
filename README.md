@@ -316,7 +316,7 @@ const {Builder,Key, By} = require('selenium-webdriver');
 const assert = require('assert');
 ```
 Por cada implementación que hemos hecho, hemos implementado las siguientes pruebas funcionales:
-### Función Factorial: test_factorial.test.js
+### Función Factorial: prueba_factorial.test.js
 ```
 async function Factorial_cero() {
     let driver = await new Builder().forBrowser('chrome').build()
@@ -352,7 +352,7 @@ Factorial_cero()
 Factorial_negativo()
 Factorial_positivo()
 ```
-### Función Logarítmica: test_log.test.js
+### Función Logarítmica: prueba_log.test.js
 ```
 async function logaritmo_correcto() {
     let driver = await new Builder().forBrowser('chrome').build()
@@ -391,7 +391,7 @@ logaritmo_correcto()
 logaritmo_decimal()
 logaritmo_negativo()
 ```
-### Función Porcentaje: test_porcentaje.test.js
+### Función Porcentaje: prueba_porcentaje.test.js
 ```
 async function Porcentaje_con_numeros_enteros() {
     let driver = await new Builder().forBrowser('chrome').build()
@@ -443,7 +443,7 @@ Porcentaje_a_numero_negativo()
 Porcentaje_con_numeros_negativos()
 Porcentaje_con_numeros_decimales()
 ```
-### Función Potencia: test_potencia.test.js
+### Función Potencia: prueba_potencia.test.js
 ```
 async function Exponente_correcto() {
     let driver = await new Builder().forBrowser('chrome').build()
@@ -494,7 +494,7 @@ Exponente_decimal()
 Exponente_negativo()
 Exponente_y_base_igual_a_cero()
 ```
-### Función Raíz: test_raiz.test.js
+### Función Raíz: prueba_raiz.test.js
 ```
 async function Raiz_cero() {
     let driver = await new Builder().forBrowser('chrome').build()
