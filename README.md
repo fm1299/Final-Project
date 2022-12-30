@@ -537,6 +537,20 @@ Raiz_positivo()
 ## PRUEBAS DE SEGURIDAD
 
 ## PRUEBAS DE RENDIMIENTO
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/loadview.png)
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/loadview2.png)
+
+###Archivo HTTP
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/http1.png)
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/http2.png)
+
+###Archivo css
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/css1.png)
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/css2.png)
+
+###Archivo js
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/js1.png)
+(https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/js2.png)
 
 ## INSTALACION EN JENKINS
 ### Requisitos
