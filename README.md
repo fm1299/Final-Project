@@ -535,24 +535,22 @@ Raiz_positivo()
 ## ANALISIS ESTÁTICO
 
 ## PRUEBAS DE SEGURIDAD
-Se realizo un escaneo automátizado a través del software de OWASP ZAP
-
-![Owasp](https://user-images.githubusercontent.com/82920949/210031066-9bbe2238-c5f7-480e-a3ab-0cbbf886169d.PNG)
-
-para ello subimos el proyecto en un servidor de la web ,cuyo link es : https://calculadoraunsa.000webhostapp.com/ , dicho link se introduce en la URL a atacar:
-![Input_URL](https://user-images.githubusercontent.com/82920949/210031348-832a6333-5560-4ca9-8fb1-43df455b71bf.PNG)
-y le damos click al boton atacar, posteriormente se estara ejecutando :
-![Proceso_OWASP](https://user-images.githubusercontent.com/82920949/210031584-0c955c60-20dd-4406-8ea7-b3f7745c044f.PNG)
-
-Una vez finalizado este proceso , generaremos el informe ,seleccionando la pestaña "Informe" ,posterior a esto "generar informe" y por ultimo: "Generate Report":
-![Generation_Report](https://user-images.githubusercontent.com/82920949/210031809-03def744-a192-4ec6-b189-4b7311a07398.PNG)
-
-despues de seguir dichos pasos obtendremos el informe , a traves de una ventana emergente que se abrira mostrando el Informe de escaeno de OWASP ZAP:
-![Report](https://user-images.githubusercontent.com/82920949/210031913-75fad0d0-daee-488c-a8fe-d4e5cfecfbae.PNG)
-
-
 
 ## PRUEBAS DE RENDIMIENTO
+<img src="Imagenes/loadview.png">
+<img src="Imagenes/loadview2.png">
+
+### Archivo HTTP
+<img src="Imagenes/http1.png">
+<img src="Imagenes/http2.png">
+
+### Archivo css
+<img src="Imagenes/css1.png">
+<img src="Imagenes/css2.png">
+
+### Archivo js
+<img src="Imagenes/js1.png">
+<img src="Imagenes/js2.png">
 
 ## INSTALACION EN JENKINS
 ### Requisitos
