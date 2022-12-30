@@ -1,11 +1,11 @@
 # PROYECTO CALCULADORA
+![Imagen](https://github.com/UbertoGC/practica3_ISII_rama1/blob/main/Imagenes/Calculadora.png)
 ## INTEGRANTES:
 - UBERTO GARCIA CACERES
 - JOSUE GABRIEL SUMARE USCA
 - FABRICIO MIGUEL MATTOS CAHUI
 - ANGIE ALEXANDRA PINO HUARSAYA
 - ROY ANGEL CHOQUEHUANCA ANCONEYRA
-
 El proyecto es una calculadora simple que, añadiendo funcionalidades y actualizaciones, aumentamos su complejidad y mejoramos sus fallos.
 ## PROPOSITO
 Nuestro objetivo es mejorar y ampliar las funcionalidades del proyecto que actualmente tenemos, agregando más complejidad a un proyecto simple.
